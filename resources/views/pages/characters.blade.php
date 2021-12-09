@@ -45,15 +45,14 @@ This should also return to a 404 page or redirect back with error custom message
 */
 
 if (request()->route('id') > 1) {
-
 $pageno = request()->route('id');
-
 } else {
 $pageno = 1;
 }
 
 
-$total_pages = ceil($get_characters_info['count'] / $get_characters_info['pages']);
+
+$total_pages = $get_characters_info['pages'];
 
 echo '
 <div class="container border-top">

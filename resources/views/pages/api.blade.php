@@ -61,10 +61,8 @@ $pageno = request()->route('id');
 $pageno = 1;
 }
 
-/*
-Store a rounded number in variable $total_pages after calculating total objects divided by page total
-*/
-$total_pages = ceil($get_all_characters_info['count'] / $get_all_characters_info['pages']);
+
+$total_pages = $get_all_characters_info['pages'];
 
 
 
