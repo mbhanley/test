@@ -61,7 +61,7 @@ echo '
 <nav aria-label="Page navigation example">
 <ul class="pagination">';
 
-if(is_numeric($pageno <= 1)) { 
+if($pageno <= 1) { 
   echo '<li class="disabled page-item">
           <a class="page-link" href="#" aria-label="Next">
             <span aria-hidden="true"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Prev</span>
@@ -80,10 +80,10 @@ echo '<li class="page-item">
         </li>';
 }
 
-if(is_numeric($pageno >= $total_pages)) { 
+if($pageno >= $total_pages) { 
   echo '<li class="disabled page-item">
           <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&Next&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></span>
+            <span aria-hidden="true">Next&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></span>
             <span class="sr-only">Next</span>
           </a>
         </li>';
